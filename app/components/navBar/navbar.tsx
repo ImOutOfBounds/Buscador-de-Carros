@@ -1,14 +1,12 @@
 'use client';
 
-import { Container, Image, ImageContainer, NavItem, Bold } from "./style";
+import { Container, Logo, ImageContainer, NavItem, Bold } from "./style";
 
 export default function NavBar() {
     return (
         <Container>
             <ImageContainer>
-                
-                <Image src="/logo.png" />
-                
+                <Logo src="/logo.png" />
             </ImageContainer>
             <NavItem as="a" href="#contact-us">
                 Wheels <Bold>Store</Bold>

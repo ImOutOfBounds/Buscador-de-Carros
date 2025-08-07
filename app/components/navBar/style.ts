@@ -20,7 +20,7 @@ export const ImageContainer = styled.div`
     height: 60px;
 `;
 
-export const Image = styled.img`
+export const Logo = styled.img`
     height: 100%;
     transition: filter 0.3s ease;
 
