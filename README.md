@@ -11,3 +11,7 @@
 5. Que tipo de monetização você considera viável para essa aplicação?
 
 6. Há alguma estratégia de retenção de usuários que você aplicaria?
+
+## Mockup do projeto
+
+![alt text](img/mockup.png)
