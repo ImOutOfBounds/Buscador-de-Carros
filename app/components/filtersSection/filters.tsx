@@ -25,22 +25,23 @@ export default function FiltersSection() {
     filterJson(data.map((item) => item.Name)),
     filterJson(data.map((item) => item.Model)),
     [
-        { label: 'Gasolina', value: 'gasolina' },
-        { label: 'Etanol', value: 'etanol' },
-        { label: 'Diesel', value: 'diesel' },
-        { label: 'Elétrico', value: 'eletrico' },
+        { label: 'Até R$ 10.000,00', value: 'Price1' },
+        { label: 'R$ 10.000,00 - R$ 20.000,00', value: 'Price2' },
+        { label: 'R$ 20.000,00 - R$ 50.000,00', value: 'Price3' },
+        { label: 'Mais de R$ 50.000,00', value: 'Price4' },
     ],
     filterJson(data.map((item) => item.Location)),
     ];
 
 
-  const [selectedOptions, setSelectedOptions] = useState<string[]>(Array(selectorsData.length).fill(""));
+  const [selectedOptions, setSelectedOptions] = useState<string[][]>(Array(selectorsData.length).fill([]).map(() => []));
 
-  const handleChange = (index: number, value: string) => {
-    const updated = [...selectedOptions];
-    updated[index] = value;
-    setSelectedOptions(updated);
-  };
+  const handleChange = (index: number, values: string[]) => {
+  const updated = [...selectedOptions];
+  updated[index] = values;
+  setSelectedOptions(updated);
+};
+
 
   const logResult = () => {
     console.log(selectedOptions);
