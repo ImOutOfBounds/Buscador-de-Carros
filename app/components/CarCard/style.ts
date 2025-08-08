@@ -12,6 +12,11 @@ export const Container = styled.div`
 
 export const TopContent = styled.div`
     background-color: #777777ff;
+    transition: transform 0.5s ease;
+    
+     &:hover {
+        background-color: #232323ff;
+    }
 `
 
 
