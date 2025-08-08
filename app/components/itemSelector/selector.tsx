@@ -1,19 +1,32 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Select } from './style';
 
-export default function Selector() {
-  const [selected, setSelected] = useState('');
+type Option = {
+  label: string;
+  value: string;
+};
 
+type SelectorProps = {
+  options?: Option[];
+  selected: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+};
+
+export default function Selector({ options = [], selected, onChange, placeholder = 'Filter By', }: SelectorProps) {
   return (
     <Container>
-      <Select value={selected} onChange={(e) => setSelected(e.target.value)}>
-        <option value="">Selecione...</option>
-        <option value="carros">Carros</option>
-        <option value="motos">Motos</option>
-        <option value="caminhoes">Caminhões</option>
+      <Select value={selected} onChange={(e) => onChange(e.target.value)}>
+        <option value="">{placeholder}</option>
+        {options.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
       </Select>
     </Container>
   );
 }
+
