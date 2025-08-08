@@ -1,19 +1,31 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Container, CarPicture, Info, Button } from './style';
+import { Container, CarPicture, Info, Button, TopContent } from './style';
 
-export default function CarCard() {
+type CarCardProps = {
+  name: string;
+  model: string;
+  image: string;
+  price: number;
+  location: string;
+};
+
+
+export default function CarCard({ name, model, image, price, location }: CarCardProps) {
   return (
     <Container>
+      <TopContent>
         <Info>
-            Car x
+            {name} {model}
         </Info>
-        <CarPicture src="/carTemplateImg.jpg"></CarPicture>
+        <CarPicture src={image}></CarPicture>
         <Info>
-            R$ 99999,00
+            R$ {price}
         </Info>
-        <Button> See More</Button>
+        <Info>{location}</Info>
+      </TopContent>
+      <Button> See More</Button>
     </Container>
   );
 }
