@@ -3,6 +3,7 @@ import SearchBar from "./components/searchBar/searchBar";
 import FiltersSection from "./components/filtersSection/filters";
 import Selector from "./components/itemSelector/selector";
 import CarsSection from "./components/carCardsSection/carsSection";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SearchBar></SearchBar>
       <Selector></Selector>
       <CarsSection></CarsSection>
+      <Footer></Footer>
     </>
   );
 }
