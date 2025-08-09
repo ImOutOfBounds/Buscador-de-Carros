@@ -10,10 +10,10 @@ export const applyFilters = (data: any[], selectedOptions: string[][]) => {
     if (priceRanges.length > 0) {
       priceMatch = priceRanges.some(range => {
         const price = car.Price;
-        if (range === 'Price1') return price <= 10000;
-        if (range === 'Price2') return price > 10000 && price <= 20000;
-        if (range === 'Price3') return price > 20000 && price <= 50000;
-        if (range === 'Price4') return price > 50000;
+        if (range === 'Price1') return price <= 70000;
+        if (range === 'Price2') return price > 70000 && price <= 90000;
+        if (range === 'Price3') return price > 90000 && price <= 100000;
+        if (range === 'Price4') return price > 100000;
         return false;
       });
     }
@@ -41,3 +41,4 @@ export const handleSort = (data: any[], sortOption: string) => {
 
   return sortedCards;
 };
+

@@ -33,10 +33,10 @@ export default function FiltersSection({ onFilter }: FiltersSectionProps) {
     filterJson(data.map((item) => item.Name)),
     filterJson(data.map((item) => item.Model)),
     [
-        { label: 'Até R$ 10.000,00', value: 'Price1' },
-        { label: 'R$ 10.000,00 - R$ 20.000,00', value: 'Price2' },
-        { label: 'R$ 20.000,00 - R$ 50.000,00', value: 'Price3' },
-        { label: 'Mais de R$ 50.000,00', value: 'Price4' },
+        { label: 'Up to R$ 70,000.00', value: 'Price1' },
+        { label: 'R$ 70,000.00 - R$ 90,000.00', value: 'Price2' },
+        { label: 'R$ 90,000.00 - R$ 100,000.00', value: 'Price3' },
+        { label: 'More than R$ 100,000.00', value: 'Price4' },
     ],
     filterJson(data.map((item) => item.Location)),
     ];

@@ -31,7 +31,7 @@ export default function SortFilter({ onSort }: SortFilterProps) {
     <Container>
         <FilterContainer>
         <SelectOpt value={selected} onChange={handleChange}> 
-            <option value="">Ordenar por</option>
+            <option value="">Order by</option>
             {options.map((opt) => (
             <option key={opt.value} value={opt.value}>
                 {opt.label}

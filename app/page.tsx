@@ -13,11 +13,25 @@ import { applyFilters, handleSort } from './utils';
 export default function Home() {
   const [selectedCards, setSelectedCards] = useState(data);
   const [selectedOptions, setSelectedOptions] = useState<string[][]>([[], [], [], []]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const filteredCars = applyFilters(data, selectedOptions);
+    let filteredCars = applyFilters(data, selectedOptions);
+
+    if (searchQuery) {
+      filteredCars = filteredCars.filter(car => {
+      return Object.values(car).some(value => {
+        if (typeof value === 'string') {
+          return value.toLowerCase().includes(searchQuery.toLowerCase());
+        }
+        return false;
+      });
+    });
+
+    }
+
     setSelectedCards(filteredCars);
-  }, [selectedOptions]); 
+  }, [selectedOptions, searchQuery]);
 
   const handleFilterChange = (newOptions: string[][]) => {
     setSelectedOptions(newOptions);
@@ -28,11 +42,15 @@ export default function Home() {
     setSelectedCards(sortedCars);
   };
 
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+  };
+
   return (
     <>
       <NavBar />
       <FiltersSection onFilter={handleFilterChange} />
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} />
       <SortFilter onSort={handleSortChange} />
       <CarsSection data={selectedCards} />
       <Footer />
