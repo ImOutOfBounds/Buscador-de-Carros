@@ -15,6 +15,10 @@ export const FatherContainer = styled.div<ICarousel>`
     align-items: center;
     background-color: #191919ff;
     margin-top: 100px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 `;
 
 export const Container = styled.div<ICarousel>`
@@ -22,6 +26,11 @@ export const Container = styled.div<ICarousel>`
     flex-direction: column;
     padding: 60px 0;
     width: 20vw;
+
+    @media (max-width: 768px) {
+        padding: 20px 0;
+        width: 80vw;
+    }
 `;
 
 export const WaterMarkContainer = styled.footer<ICarousel>`
@@ -40,6 +49,12 @@ export const SubContainer = styled.div<ICarousel>`
     display: flex;
     padding: 10px 0;
     gap: 100px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0px;
+        padding: 0;
+    }
 `;
 
 export const Span = styled.span`
@@ -62,6 +77,10 @@ export const TitleTwo = styled.p`
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 `;
 
 export const Info = styled.p`
@@ -76,6 +95,10 @@ export const Info = styled.p`
         color: red
         cursor: pointer;
     }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 export const Logo = styled.img`
@@ -88,4 +111,9 @@ export const Logo = styled.img`
         cursor: pointer;
         filter: sepia(1) saturate(1000%) hue-rotate(-30deg);
     }
+
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+    
 `;

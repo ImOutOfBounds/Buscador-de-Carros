@@ -10,6 +10,10 @@ export const Container = styled.div`
     padding-top: 80px;
     justify-content: center;
     gap: 10rem;
+
+    @media (max-width: 1000px) {
+        gap: 1rem;
+    }
 `;
 
 export const Button = styled.button`
