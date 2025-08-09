@@ -2,9 +2,20 @@
 
 import CarCard from "../CarCard/carCard";
 import { Container, CardsSec } from "./style";
-import data from "../../carData/data.json";
 
-export default function CarsSection() {
+type Car = {
+  Name: string;
+  Model: string;
+  Image: string;
+  Price: number;
+  Location: string;
+};
+
+type CarsSectionProps = {
+  data: Car[];
+};
+
+export default function CarsSection({ data }: CarsSectionProps) {
     return (
         <Container>
             <CardsSec>

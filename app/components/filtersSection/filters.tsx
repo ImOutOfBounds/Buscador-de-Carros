@@ -5,7 +5,15 @@ import { Container, Button } from "./style";
 import Selector from "../itemSelector/selector";
 import data from "../../carData/data.json";
 
-export default function FiltersSection() {
+type FiltersSectionProps = {
+  onFilter: (selectedOptions: string[][]) => void;
+};
+
+export default function FiltersSection({ onFilter }: FiltersSectionProps) {
+
+    const applyFilter = () => {
+        onFilter(selectedOptions);
+    };
 
     const secTitle = [
     'Name',
@@ -59,7 +67,7 @@ export default function FiltersSection() {
         />
       ))}
 
-      <Button onClick={logResult}>Filtrar</Button>
+      <Button onClick={applyFilter}>Filtrar</Button>
     </Container>
   );
 }
