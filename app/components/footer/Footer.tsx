@@ -7,7 +7,7 @@ export default function Footer() {
         <FatherContainer>
             <SubContainer>
                 <Container>
-                    <Logo src="/logo.png" />
+                    <Logo src="./logo.png" />
                     <Title>Wheels Store </Title>
                 </Container>
                 <Container>

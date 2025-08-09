@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
         <Container>
             <ImageContainer>
-                <Logo src="/logo.png" />
+                <Logo src="./logo.png" />
             </ImageContainer>
             <NavItem as="a" href="#contact-us">
                 Wheels <Bold>Store</Bold>
