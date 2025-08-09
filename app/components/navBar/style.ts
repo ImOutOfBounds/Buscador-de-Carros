@@ -41,6 +41,10 @@ export const NavItem = styled.h1`
         cursor: pointer;
         color: #e03c36;
     }
+
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
 `;
 
 export const Bold = styled.span`
