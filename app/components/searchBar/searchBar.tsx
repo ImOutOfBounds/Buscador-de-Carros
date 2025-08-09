@@ -1,11 +1,17 @@
 'use client';
 
-import { Container, Search } from "./style";
+import { Container, SearchBarContent, SearchLabel, SearchBtn } from "./style";
+import { FaSearch } from 'react-icons/fa';
 
 export default function SearchBar() {
     return (
         <Container>
-            <Search type="text" placeholder="Pesquisar..." />
+            <SearchBarContent>
+                <SearchLabel type="text" placeholder="Pesquisar..." />
+                <SearchBtn>
+                    <FaSearch />
+                </SearchBtn>
+            </SearchBarContent>
         </Container>
     );
 }

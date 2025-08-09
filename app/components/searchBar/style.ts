@@ -7,14 +7,36 @@ export const Container = styled.div`
     width: 80vw;
     display: flex;
     align-items: center;
-    padding: 0 40px;
+    margin: 5rem auto;
 `;
 
-export const Search = styled.input`
-    padding: 10px;
+export const SearchBarContent = styled.div`
+    height: 60px;
+    width: 100%;
+    display: flex;
+`
+
+export const SearchLabel = styled.input`
     font-size: 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px 0 0 10px;
     width: 100%;
-    max-width: 300px;
+    height: 100%;
+    border: 1px solid #eee;
+`
+
+export const SearchBtn = styled.button`
+    background-color: #333;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+
+    &:hover {
+        background-color: #971212ff;
+        cursor: pointer;
+    }
 `
