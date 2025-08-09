@@ -20,15 +20,15 @@ Por meio de anuncios na internet, buscando principalmente a trasmissão das camp
 ### 3. Qual seria sua estimativa de CAC (Custo de Aquisição de Cliente)?
 A formula do CAC é:
 
-\[
-CAC = \frac{\text{Custo Total com Marketing e Vendas}}{\text{Número de Clientes Adquiridos}}
-\]
+$$
+\text{CAC} = \frac{\text{Custo Total com Marketing e Vendas}}{\text{Número de Clientes Adquiridos}}
+$$
 
 Considerando que o Google Ads recomenda um orçamento diário de R$ 20,00 para o Youtube, e R$ 30,00 para o Instagram. Em um mês seriam gastos R$ 600,00 reais com propagandas no Youtube e R$ 900,00 com o instagram, totalizando R$ 1500,00. Caso conseguissemos atrair 10 clientes por mês, teriamos um CAC inicial estimado de:
 
-\[
-\frac{\text{1500}}{\text{10}} = R$ 150,00
-\]
+$$
+\frac{1500}{10} = 150
+$$
 
 ### 4. Qual seria sua proposta de LTV (Lifetime Value) e como você maximizaria isso?
 A proposta seria sempre buscar encontrar novos clientes, uma vez que um carro é um bem que não é adiquirido com tanta frequência, e para isso teríamos um sistema de recomendações, recompensando pessoas da plataforma ao recomendarem uma compra ou uma incrição de veículo para outra pessoa, oferecendo pontos que gerariam descontos em compras futuras. Desta forma, manteríamos clientes anteriores e sempre renovariamos a base de usuários, eventualmente reduzindo o CAC.
